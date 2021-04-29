@@ -1,16 +1,15 @@
 //root route
 // HTML routes
-const router = require("express").Router();
-const path = require("path");
+  
+var path = require("path");
+var express = require("express");
+var router = express.Router();
 
-router.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname + "./public/index.html"));
+router.get("/exercise", function(req, res) {
+  res.sendFile(path.join(__dirname, "../public/exercise.html"));
 });
-router.get("/stats", (req, res) => {
-  res.sendFile(path.join(__dirname + "./public/stats.html"));
-});
-router.get("/exercise", (req, res) => {
-  res.sendFile(path.join(__dirname + "./public/exercise.html"));
+router.get("/stats", function(req, res) {
+  res.sendFile(path.join(__dirname, "../public/stats.html"));
 });
 
 
