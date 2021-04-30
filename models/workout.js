@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 const workoutSchema=new Schema({
    
-    Day: {
+    day: {
         type: Date,
         default:()=> new Date(),
         // new Date().toLocaleDateString()
