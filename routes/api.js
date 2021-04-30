@@ -4,12 +4,19 @@ const db = require("../models");
 // get route /api/workouts  
 // get last workout
 router.get("/api/workouts", (req, res) => {
-  db.Workout.find({}, (error, data) => {
-      if (error) {
-        res.send(error);
-      } else {
-        res.json(data);
+  db.Workout.aggregate([
+    {
+      $addFields: {
+        totalDuration:{  $sum: '$exercises.duration', 
+        
+        }
       }
+    },
+    ]).then (dbWorkout => {
+      res.json(dbWorkout);
+    })
+    .catch(err => {
+      res.json(err);
     });
   });
 

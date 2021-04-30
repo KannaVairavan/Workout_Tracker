@@ -6,7 +6,8 @@ const workoutSchema=new Schema({
    
     Day: {
         type: Date,
-        
+        default:()=> new Date(),
+        // new Date().toLocaleDateString()
       },
     exercises: [
         {
