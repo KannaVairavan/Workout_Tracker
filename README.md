@@ -6,7 +6,7 @@
 
 ## Summary
 
-In this application user will be able to track their daily workouts with name, type, weight, sets, reps, distance and duration of exercise. Stats page will display chart with past seven day workouts and total duration of each workouts. This application uses MongoDB Atlas connection. This application is
+In this application user will be able to track their daily workouts with name, type, weight, sets, reps, distance and duration of exercise. Stats page will display chart with past seven workouts and total duration of each workouts. This application uses MongoDB Atlas connection. This application is
 deployed to Heroku.
 
 ## Installation:
